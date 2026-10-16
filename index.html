@@ -1,0 +1,1544 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Afriqo E-Learning Tanzania — Transforming education through technology</title>
+<meta name="description" content="Afriqo E-Learning Tanzania is an Arusha-based education technology company. We help students learn, schools teach and professionals grow — through SonzaSchool, SonzaSpark and SonzaTech." />
+<link rel="icon" type="image/png" href="brand_assets/afriqo-mark-small.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          'brand':            '#2E1A4A',   // primary deep plum, matches wordmark
+          'brand-dark':       '#1F0F33',
+          'brand-900':        '#140822',
+          'brand-mid':        '#4A2E70',
+          'brand-light':      '#6B4194',
+          'brand-tint':       '#F5F0FA',
+          'orange':           '#e07c00',
+          'orange-dk':        '#b56400',
+          'orange-lt':        '#f58220',
+          'cream':            '#f5f1eb',
+          'cream-2':          '#eee8dc',
+          'ink':              '#1a1225',
+          'muted':            '#5a4f68',
+          'line':             '#e5e2db',
+        },
+        fontFamily: {
+          sans: ['Poppins', 'system-ui', 'sans-serif'],
+        },
+      }
+    }
+  }
+</script>
+
+<style>
+  :root {
+    --brand: #2E1A4A;
+    --brand-dark: #1F0F33;
+    --brand-900: #140822;
+    --brand-mid: #4A2E70;
+    --brand-light: #6B4194;
+    --brand-tint: #F5F0FA;
+    --orange: #e07c00;
+    --orange-dk: #b56400;
+    --orange-lt: #f58220;
+    --cream: #f5f1eb;
+    --cream-2: #eee8dc;
+    --ink: #1a1225;
+    --muted: #5a4f68;
+    --line: #e5e2db;
+    --white: #ffffff;
+  }
+
+  * { -webkit-font-smoothing: antialiased; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Poppins', system-ui, sans-serif;
+    background: var(--white);
+    color: var(--ink);
+    line-height: 1.6;
+    font-size: 16px;
+  }
+
+  /* Container */
+  .wrap {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+  @media (min-width: 768px) { .wrap { padding-left: 2rem; padding-right: 2rem; } }
+  @media (min-width: 1200px) { .wrap { padding-left: 3rem; padding-right: 3rem; } }
+
+  /* Eyebrow */
+  .eyebrow {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--brand);
+  }
+  .eyebrow-orange { color: var(--orange-dk); }
+  .eyebrow-muted  { color: var(--muted); }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 0.85rem 1.4rem;
+    border-radius: 10px;
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: -0.005em;
+    line-height: 1;
+    transition: transform 220ms cubic-bezier(.2,.9,.3,1.2),
+                background-color 180ms ease,
+                color 180ms ease,
+                box-shadow 220ms ease,
+                border-color 180ms ease;
+    will-change: transform;
+    cursor: pointer;
+  }
+  .btn-primary {
+    background: var(--orange);
+    color: #fff;
+    box-shadow: 0 8px 20px -10px rgba(224,124,0,0.55),
+                inset 0 1px 0 rgba(255,255,255,0.14);
+  }
+  .btn-primary:hover {
+    background: var(--orange-dk);
+    transform: translateY(-2px);
+    box-shadow: 0 14px 26px -12px rgba(181,100,0,0.55),
+                inset 0 1px 0 rgba(255,255,255,0.18);
+  }
+  .btn-primary:focus-visible { outline: 2px solid var(--brand); outline-offset: 3px; }
+
+  .btn-secondary {
+    background: var(--brand);
+    color: #fff;
+    box-shadow: 0 8px 20px -10px rgba(46,26,74,0.55),
+                inset 0 1px 0 rgba(255,255,255,0.14);
+  }
+  .btn-secondary:hover {
+    background: var(--brand-dark);
+    transform: translateY(-2px);
+  }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--brand);
+    border: 1.5px solid var(--brand);
+  }
+  .btn-outline:hover {
+    background: var(--brand);
+    color: #fff;
+    transform: translateY(-2px);
+  }
+  .btn-outline-light {
+    background: transparent;
+    color: #fff;
+    border: 1.5px solid rgba(255,255,255,0.55);
+  }
+  .btn-outline-light:hover {
+    background: #fff;
+    color: var(--brand);
+    border-color: #fff;
+    transform: translateY(-2px);
+  }
+
+  .btn:active { transform: translateY(0); }
+
+  /* Nav link */
+  .nav-link {
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--ink);
+    padding: 6px 2px;
+    transition: color 180ms ease;
+  }
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 2px; right: 2px; bottom: -2px;
+    height: 2px;
+    background: var(--orange);
+    border-radius: 2px;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 280ms cubic-bezier(.2,.9,.3,1.1);
+  }
+  .nav-link:hover,
+  .nav-link:focus-visible { color: var(--brand); outline: none; }
+  .nav-link:hover::after,
+  .nav-link:focus-visible::after { transform: scaleX(1); }
+
+  /* Headings */
+  h1, h2, h3, h4 { font-weight: 700; letter-spacing: -0.025em; line-height: 1.1; color: var(--ink); }
+  .h-xl { font-size: clamp(2.4rem, 6vw, 4.6rem); line-height: 1.03; letter-spacing: -0.035em; }
+  .h-lg { font-size: clamp(1.9rem, 4.2vw, 3rem); line-height: 1.1; letter-spacing: -0.03em; }
+  .h-md { font-size: clamp(1.35rem, 2.2vw, 1.7rem); line-height: 1.2; }
+  .h-sm { font-size: 1.15rem; line-height: 1.3; }
+
+  /* Hero background — refined, less glow, more depth */
+  .hero {
+    background:
+      radial-gradient(circle at 100% 0%, rgba(245,130,32,0.14), transparent 42%),
+      radial-gradient(ellipse at -5% 110%, rgba(107,65,148,0.38), transparent 55%),
+      linear-gradient(172deg, #1A0A2E 0%, #241440 40%, #2E1A4A 70%, #3A2258 100%);
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::after {
+    /* soft fine-grain noise for depth */
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0.5;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.08 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  }
+  .hero .orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(70px);
+    pointer-events: none;
+  }
+  .hero .orb-2 { width: 440px; height: 440px; bottom: -200px; left: -140px; background: var(--brand-light); opacity: 0.38; }
+
+  /* Signal arcs backdrop */
+  .signal-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'><g stroke='%23ffffff' stroke-width='1' fill='none' opacity='0.05'><circle cx='200' cy='380' r='60'/><circle cx='200' cy='380' r='120'/><circle cx='200' cy='380' r='180'/><circle cx='200' cy='380' r='240'/></g></svg>");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: 1200px 1200px;
+  }
+
+  /* Chip */
+  .chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 500;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.18);
+    color: #fff;
+    backdrop-filter: blur(4px);
+  }
+  .chip-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--orange-lt); }
+
+  /* Card */
+  .card {
+    position: relative;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 2rem;
+    transition: transform 300ms cubic-bezier(.2,.9,.3,1.1),
+                border-color 200ms ease,
+                box-shadow 300ms ease;
+    will-change: transform;
+  }
+  .card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(46,26,74,0.4);
+    box-shadow:
+      0 24px 40px -24px rgba(46,26,74,0.3),
+      0 2px 8px -2px rgba(26,18,37,0.06);
+  }
+
+  /* Pill */
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: var(--brand-tint);
+    color: var(--brand);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    border: 1px solid rgba(46,26,74,0.14);
+  }
+  .pill-orange { background: rgba(224,124,0,0.1); color: var(--orange-dk); border-color: rgba(224,124,0,0.25); }
+  .pill-brand  { background: var(--brand-tint); color: var(--brand); border-color: rgba(46,26,74,0.18); }
+
+  /* Icon chip */
+  .card-ico {
+    width: 56px; height: 56px;
+    border-radius: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--brand-tint);
+    color: var(--brand);
+    flex-shrink: 0;
+  }
+  .card-ico.orange { background: rgba(224,124,0,0.1); color: var(--orange); }
+
+  /* Program card accent bar */
+  .pbar {
+    position: absolute;
+    top: 0; left: 20px; right: 20px;
+    height: 3px;
+    border-radius: 0 0 3px 3px;
+    background: currentColor;
+    opacity: 0.9;
+  }
+
+  /* Stats */
+  .stat-num {
+    font-size: clamp(2.4rem, 5.2vw, 3.6rem);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--ink);
+    line-height: 1;
+  }
+  .stat-num .accent { color: var(--orange); }
+  .stat-lbl {
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 0.75rem;
+    font-weight: 500;
+  }
+
+  /* Dark CTA */
+  .dark-cta {
+    background:
+      radial-gradient(ellipse at 10% 20%, rgba(224,124,0,0.3), transparent 55%),
+      radial-gradient(ellipse at 90% 90%, rgba(107,65,148,0.45), transparent 55%),
+      linear-gradient(135deg, #140822 0%, #2E1A4A 100%);
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Announcement bar */
+  .announce {
+    background: var(--brand-900);
+    color: #fff;
+  }
+  .announce a:hover { color: var(--orange-lt); }
+
+  /* Header shadow */
+  .site-header {
+    background: #fff;
+    border-bottom: 1px solid var(--line);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    transition: box-shadow 220ms ease;
+  }
+  .site-header.scrolled {
+    box-shadow: 0 6px 20px -16px rgba(26,18,37,0.3);
+  }
+
+  /* Mobile menu */
+  .mobile-panel {
+    position: fixed;
+    inset: 0 0 0 auto;
+    width: min(360px, 100%);
+    background: #fff;
+    z-index: 70;
+    transform: translateX(100%);
+    transition: transform 320ms cubic-bezier(.2,.9,.3,1.1);
+    border-left: 1px solid var(--line);
+  }
+  .mobile-panel.open { transform: translateX(0); }
+  .mobile-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(26,18,37,0.4);
+    z-index: 69;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 240ms ease;
+  }
+  .mobile-backdrop.show { opacity: 1; pointer-events: auto; }
+
+  /* Training tile */
+  .training-tile {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 2rem;
+    transition: border-color 200ms, transform 220ms, box-shadow 300ms;
+  }
+  .training-tile:hover {
+    border-color: var(--orange);
+    transform: translateY(-2px);
+    box-shadow: 0 14px 30px -24px rgba(224,124,0,0.4);
+  }
+
+  .check {
+    display: inline-flex;
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    background: var(--brand-tint);
+    color: var(--brand);
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .check.orange { background: rgba(224,124,0,0.14); color: var(--orange); }
+
+  /* Reveal animations */
+  .reveal {
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 600ms ease, transform 600ms cubic-bezier(.2,.9,.3,1);
+  }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+  }
+
+  /* Partner band */
+  .partner-band {
+    background: var(--cream);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+
+  /* ─── Phone mockup ─── */
+  .phone-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    min-height: 540px;
+  }
+  .phone-glow {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+  .phone-glow::before,
+  .phone-glow::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+  }
+  .phone-glow::before {
+    width: 280px; height: 280px;
+    top: -40px; right: -20px;
+    background: rgba(224,124,0,0.4);
+  }
+  .phone-glow::after {
+    width: 240px; height: 240px;
+    bottom: -40px; left: -20px;
+    background: rgba(107,65,148,0.65);
+  }
+
+  .phone {
+    position: relative;
+    width: 282px;
+    height: 572px;
+    background: linear-gradient(145deg, #141020 0%, #211830 100%);
+    border-radius: 44px;
+    padding: 11px;
+    box-shadow:
+      0 50px 100px -30px rgba(0,0,0,0.55),
+      0 25px 40px -20px rgba(31,15,51,0.6),
+      inset 0 1px 1px rgba(255,255,255,0.08),
+      0 0 0 1.5px rgba(255,255,255,0.06);
+    transform: rotate(-2.5deg);
+    z-index: 2;
+  }
+  .phone-notch {
+    position: absolute;
+    top: 11px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 108px;
+    height: 22px;
+    background: #141020;
+    border-radius: 0 0 14px 14px;
+    z-index: 10;
+  }
+  .phone-screen {
+    background: #FAF6ED;
+    border-radius: 34px;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    font-size: 11px;
+  }
+  .phone-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+  }
+
+  .s-status {
+    padding: 10px 22px 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 10.5px;
+    font-weight: 600;
+    color: #1a1225;
+  }
+  .s-icons { display: flex; gap: 4px; align-items: center; opacity: 0.75; }
+
+  .s-app-head {
+    padding: 10px 16px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .s-brand {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #1a1225;
+    letter-spacing: -0.015em;
+  }
+  .s-avatar {
+    width: 26px; height: 26px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #e07c00 0%, #b56400 100%);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+  }
+
+  .s-greet {
+    padding: 10px 16px 14px;
+  }
+  .s-greet-h {
+    font-size: 17px;
+    font-weight: 700;
+    color: #1a1225;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+  .s-greet-s {
+    font-size: 11px;
+    color: #6a5e7a;
+    margin-top: 3px;
+    font-weight: 500;
+  }
+
+  .s-today {
+    margin: 0 14px 10px;
+    background: linear-gradient(145deg, #2E1A4A 0%, #4A2E70 100%);
+    border-radius: 16px;
+    padding: 14px 14px 13px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 20px -10px rgba(46,26,74,0.5);
+  }
+  .s-today::before {
+    content: "";
+    position: absolute;
+    top: -30px; right: -30px;
+    width: 100px; height: 100px;
+    border-radius: 50%;
+    background: rgba(224,124,0,0.35);
+    filter: blur(24px);
+  }
+  .s-today-tag {
+    font-size: 9.5px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.65);
+    position: relative;
+  }
+  .s-today-title {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.15;
+    margin-top: 4px;
+    letter-spacing: -0.015em;
+    position: relative;
+  }
+  .s-progress {
+    margin-top: 11px;
+    height: 5px;
+    background: rgba(255,255,255,0.12);
+    border-radius: 999px;
+    overflow: hidden;
+    position: relative;
+  }
+  .s-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #f58220 0%, #e07c00 100%);
+    border-radius: 999px;
+  }
+  .s-today-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    position: relative;
+  }
+  .s-today-meta .m-lbl {
+    font-size: 10px;
+    color: rgba(255,255,255,0.7);
+    font-weight: 500;
+  }
+  .s-cta {
+    background: #fff;
+    color: #2E1A4A;
+    font-size: 10.5px;
+    font-weight: 700;
+    padding: 5px 10px 5px 11px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    letter-spacing: -0.01em;
+  }
+
+  .s-subs {
+    padding: 2px 14px 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 7px;
+  }
+  .s-sub {
+    background: #fff;
+    border: 1px solid #eceae2;
+    border-radius: 12px;
+    padding: 10px 8px 9px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+  }
+  .s-sub-ico {
+    width: 24px; height: 24px;
+    border-radius: 7px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    color: #fff;
+  }
+  .s-sub-ico.p { background: linear-gradient(135deg, #6B4194, #4A2E70); }
+  .s-sub-ico.o { background: linear-gradient(135deg, #f58220, #e07c00); }
+  .s-sub-ico.g { background: linear-gradient(135deg, #4a9972, #357a56); }
+  .s-sub-lbl {
+    font-size: 10.5px;
+    font-weight: 600;
+    color: #1a1225;
+    line-height: 1.1;
+  }
+
+  .s-tutor {
+    margin: 2px 14px 10px;
+    background: #fff;
+    border: 1px solid #eceae2;
+    border-radius: 999px;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 10.5px;
+    color: #6a5e7a;
+    font-weight: 500;
+  }
+  .s-tutor .d {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: #4a9972;
+    flex-shrink: 0;
+  }
+
+  .s-tabs {
+    margin-top: auto;
+    padding: 10px 10px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-top: 1px solid #eceae2;
+    background: #FDFAF2;
+  }
+  .s-tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    font-size: 9.5px;
+    font-weight: 500;
+    color: #a89cb3;
+  }
+  .s-tab.on { color: #2E1A4A; font-weight: 700; }
+  .s-tab svg { opacity: 0.8; }
+  .s-tab.on svg { opacity: 1; }
+
+  /* Floating badges around phone */
+  .phone-badge {
+    position: absolute;
+    background: #fff;
+    border-radius: 14px;
+    padding: 11px 14px;
+    box-shadow:
+      0 20px 40px -20px rgba(26,18,37,0.4),
+      0 2px 6px -2px rgba(26,18,37,0.1);
+    z-index: 3;
+    border: 1px solid rgba(26,18,37,0.06);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-width: 220px;
+  }
+  .phone-badge.pb-tr {
+    top: 48px;
+    right: -8px;
+    transform: rotate(3deg);
+  }
+  .phone-badge.pb-bl {
+    bottom: 72px;
+    left: -14px;
+    transform: rotate(-4deg);
+  }
+  .phone-badge .pb-ico {
+    width: 32px; height: 32px;
+    border-radius: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .phone-badge .pb-ico.o { background: rgba(224,124,0,0.14); color: #e07c00; }
+  .phone-badge .pb-ico.p { background: rgba(46,26,74,0.1); color: #2E1A4A; }
+  .phone-badge .pb-t {
+    font-size: 11px;
+    font-weight: 700;
+    color: #1a1225;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+  .phone-badge .pb-s {
+    font-size: 10px;
+    color: #6a5e7a;
+    margin-top: 2px;
+    font-weight: 500;
+  }
+
+  @media (max-width: 1023px) {
+    .phone { transform: rotate(-2deg) scale(0.9); }
+    .phone-badge.pb-tr { right: -4px; top: 36px; }
+    .phone-badge.pb-bl { left: -8px; bottom: 56px; }
+  }
+  @media (max-width: 480px) {
+    .phone-wrap { min-height: 500px; }
+    .phone { transform: rotate(-2deg) scale(0.84); }
+    .phone-badge.pb-tr { max-width: 170px; top: 24px; right: -2px; }
+    .phone-badge.pb-bl { max-width: 150px; bottom: 44px; left: -4px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ───────────────────────── Announcement bar ───────────────────────── -->
+<div class="announce text-[13px]">
+  <div class="wrap py-2.5 flex flex-wrap items-center justify-between gap-x-6 gap-y-1">
+    <div class="flex items-center gap-2.5">
+      <span class="w-1.5 h-1.5 rounded-full bg-orange-lt"></span>
+      <span class="text-white/85">Transforming education through technology — from Arusha.</span>
+    </div>
+    <div class="hidden sm:flex items-center gap-5 text-white/80">
+      <a href="tel:+255694593146" class="hover:text-white transition-colors">+255 694 593 146</a>
+      <a href="mailto:info@afriqoelearningtz.com" class="hover:text-white transition-colors">info@afriqoelearningtz.com</a>
+    </div>
+  </div>
+</div>
+
+<!-- ───────────────────────── Header / Nav ───────────────────────── -->
+<header class="site-header" id="siteHeader">
+  <div class="wrap flex items-center justify-between gap-6 py-3.5">
+
+    <a href="#top" class="flex items-center" aria-label="Afriqo E-Learning Tanzania home">
+      <img src="brand_assets/afriqo-logo-primary.png" alt="Afriqo E-Learning Tanzania" style="height: 48px; width: auto;" />
+    </a>
+
+    <nav class="hidden lg:flex items-center gap-7">
+      <a href="#programs" class="nav-link">Programs</a>
+      <a href="#training" class="nav-link">Training</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#impact" class="nav-link">Impact</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <div class="flex items-center gap-2 md:gap-3">
+      <a href="https://sonzaschool.com" target="_blank" rel="noopener" class="hidden md:inline-flex btn btn-outline text-[13px] px-4 py-2.5">
+        SonzaSchool
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true">
+          <path d="M3 3h6v6M3 9l6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <a href="#contact" class="btn btn-primary text-sm px-4 py-2.5 hidden sm:inline-flex">
+        Get in touch
+      </a>
+      <button type="button" id="menuBtn" class="lg:hidden w-11 h-11 rounded-lg border border-line flex items-center justify-center text-ink hover:bg-cream transition" aria-label="Open menu" aria-expanded="false" aria-controls="mobilePanel">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M3 6h14M3 10h14M3 14h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-backdrop" id="mobileBackdrop"></div>
+<aside class="mobile-panel" id="mobilePanel" aria-hidden="true">
+  <div class="flex items-center justify-between px-6 py-4 border-b border-line">
+    <span class="text-sm font-semibold text-brand uppercase tracking-wider">Menu</span>
+    <button type="button" id="closeMenu" class="w-10 h-10 rounded-lg border border-line flex items-center justify-center hover:bg-cream" aria-label="Close menu">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 4l8 8M12 4l-8 8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+  <nav class="flex flex-col px-6 py-6 gap-5 text-[17px] font-medium">
+    <a href="#programs" class="nav-link w-max">Programs</a>
+    <a href="#training" class="nav-link w-max">Training</a>
+    <a href="#about" class="nav-link w-max">About</a>
+    <a href="#impact" class="nav-link w-max">Impact</a>
+    <a href="#contact" class="nav-link w-max">Contact</a>
+    <div class="h-px bg-line my-2"></div>
+    <a href="#contact" class="btn btn-primary">Get in touch</a>
+    <a href="https://sonzaschool.com" target="_blank" rel="noopener" class="btn btn-outline">Open SonzaSchool</a>
+  </nav>
+</aside>
+
+<!-- ───────────────────────── Hero ───────────────────────── -->
+<section id="top" class="hero">
+  <div class="orb orb-2"></div>
+  <div class="signal-bg"></div>
+
+  <div class="wrap relative pt-16 pb-20 md:pt-24 md:pb-28">
+    <div class="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+
+      <!-- Headline column -->
+      <div class="lg:col-span-7 reveal">
+        <div class="chip mb-6">
+          <span class="chip-dot"></span>
+          <span>Arusha, Tanzania · Est. 2024</span>
+        </div>
+        <h1 class="h-xl text-white mb-6">
+          Transforming education<br/> through <span class="text-orange-lt">technology</span>.
+        </h1>
+        <p class="text-white/80 text-[17px] md:text-[19px] leading-relaxed max-w-[58ch] mb-8">
+          Afriqo E-Learning Tanzania is an Arusha-based education technology company. We help students learn, teachers teach, and professionals grow — through <span class="text-white font-medium">SonzaSchool</span>, <span class="text-white font-medium">SonzaSpark</span> and <span class="text-white font-medium">SonzaTech</span>.
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a href="#programs" class="btn btn-primary">
+            Explore programs
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="#training" class="btn btn-outline-light">Training &amp; workshops</a>
+        </div>
+      </div>
+
+      <!-- Visual column: phone mockup -->
+      <div class="lg:col-span-5 reveal">
+        <div class="phone-wrap">
+          <div class="phone-glow"></div>
+
+          <div class="phone">
+            <div class="phone-notch"></div>
+            <div class="phone-screen">
+              <!-- Real SonzaSchool platform screenshot -->
+              <img
+                src="photos/sonzaschool-lesson-cow.jpg"
+                alt="SonzaSchool on mobile — a Standard 1 'Animal sounds' lesson showing an illustrated cow with a Listen button"
+                class="phone-img"
+                loading="eager"
+              />
+            </div>
+          </div>
+
+          <!-- Floating accent badges -->
+          <div class="phone-badge pb-tr">
+            <span class="pb-ico o">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            </span>
+            <div>
+              <div class="pb-t">SonzaSpark · Robotics</div>
+              <div class="pb-s">Saturdays, 10 AM</div>
+            </div>
+          </div>
+
+          <div class="phone-badge pb-bl">
+            <span class="pb-ico p">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M4 20v-2a4 4 0 014-4h8a4 4 0 014 4v2M12 12a4 4 0 100-8 4 4 0 000 8z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            </span>
+            <div>
+              <div class="pb-t">1,000+ learners</div>
+              <div class="pb-s">reached so far</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── Programs ───────────────────────── -->
+<section id="programs" class="py-20 md:py-28 bg-white">
+  <div class="wrap">
+
+    <div class="grid lg:grid-cols-12 gap-8 mb-14 items-end reveal">
+      <div class="lg:col-span-7">
+        <div class="eyebrow mb-3">Our programs</div>
+        <h2 class="h-lg">
+          Three programs. One mission.
+        </h2>
+      </div>
+      <div class="lg:col-span-5">
+        <p class="text-muted text-[16px] leading-relaxed max-w-[46ch]">
+          Everything we deliver is built for Tanzanian learners, educators and institutions — from Standard 1 right through to the professionals shaping Tanzania's economy.
+        </p>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-5 md:gap-6">
+
+      <!-- SonzaSchool -->
+      <article class="card reveal" style="color: var(--brand);">
+        <span class="pbar"></span>
+        <div class="flex items-start justify-between mb-6">
+          <div class="card-ico">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M3 9l9-5 9 5M3 9v8l9 5 9-5V9M3 9l9 5 9-5" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+          </div>
+          <span class="pill">Live now</span>
+        </div>
+        <h3 class="h-md text-ink mb-3">SonzaSchool</h3>
+        <p class="text-muted text-[14.5px] leading-relaxed mb-5">
+          A digital learning platform for every Tanzanian student. Standard 1 to Form 6, plus vocational. Diagnostics, daily practice, and a tutor that answers in Kiswahili or English.
+        </p>
+        <ul class="space-y-2 text-[13.5px] text-ink/85 mb-6">
+          <li class="flex gap-2.5"><span class="check"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2 2 4-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Students, parents, teachers &amp; schools</li>
+          <li class="flex gap-2.5"><span class="check"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2 2 4-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>TIE 2023 curriculum · Kiswahili &amp; English</li>
+          <li class="flex gap-2.5"><span class="check"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2 2 4-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Primary · Secondary · Vocational</li>
+        </ul>
+        <div class="pt-5 border-t border-line">
+          <a href="https://sonzaschool.com" target="_blank" rel="noopener" class="text-brand text-[13px] font-semibold inline-flex items-center gap-1 hover:text-brand-dark">
+            Visit sonzaschool.com
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 3h6v6M3 9l6-6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- SonzaSpark -->
+      <article class="card reveal" style="color: var(--orange);">
+        <span class="pbar"></span>
+        <div class="flex items-start justify-between mb-6">
+          <div class="card-ico orange">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+          </div>
+          <span class="pill pill-orange">1,000+ youth</span>
+        </div>
+        <h3 class="h-md text-ink mb-3">SonzaSpark</h3>
+        <p class="text-muted text-[14.5px] leading-relaxed mb-5">
+          Where young minds learn to build. Practical STEM, robotics, electronics, 3D printing and fabrication for ages 8–16 — in classes, holiday bootcamps and school programs.
+        </p>
+        <ul class="space-y-2 text-[13.5px] text-ink/85 mb-6">
+          <li class="flex gap-2.5"><span class="check orange"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2 2 4-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Weekend classes &amp; holiday bootcamps</li>
+          <li class="flex gap-2.5"><span class="check orange"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2 2 4-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>In-school STEM clubs &amp; outreach</li>
+          <li class="flex gap-2.5"><span class="check orange"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2 2 4-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Robotics · 3D printing · Electronics</li>
+        </ul>
+        <div class="pt-5 border-t border-line">
+          <a href="#contact" class="text-orange-dk text-[13px] font-semibold inline-flex items-center gap-1 hover:text-orange">
+            Enrol a child or a class
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <!-- SonzaTech -->
+      <article class="card reveal" style="color: var(--brand-mid);">
+        <span class="pbar"></span>
+        <div class="flex items-start justify-between mb-6">
+          <div class="card-ico" style="background: rgba(107,65,148,0.12); color: var(--brand-mid);">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="12" rx="1.5" stroke="currentColor" stroke-width="1.7"/><path d="M8 20h8M12 16v4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+          </div>
+          <span class="pill pill-brand">Services</span>
+        </div>
+        <h3 class="h-md text-ink mb-3">SonzaTech</h3>
+        <p class="text-muted text-[14.5px] leading-relaxed mb-5">
+          Technology that reaches every classroom and office. Educational technology deployment, software, networks, IT support — and HyracBox for schools without reliable internet.
+        </p>
+        <ul class="space-y-2 text-[13.5px] text-ink/85 mb-6">
+          <li class="flex gap-2.5"><span class="check"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2 2 4-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Schools, NGOs &amp; businesses</li>
+          <li class="flex gap-2.5"><span class="check"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2 2 4-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>HyracBox offline-learning platform</li>
+          <li class="flex gap-2.5"><span class="check"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2 2 4-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Software, networks &amp; IT support</li>
+        </ul>
+        <div class="pt-5 border-t border-line">
+          <a href="#contact" class="text-brand text-[13px] font-semibold inline-flex items-center gap-1 hover:text-brand-dark">
+            Request a proposal
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6h8M7 3l3 3-3 3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── In the field (photo breakout) ───────────────────────── -->
+<section class="py-20 md:py-28 bg-white relative overflow-hidden">
+  <!-- Decorative orange arc backdrop echoing the logo -->
+  <div class="absolute right-0 top-0 w-[420px] h-[420px] pointer-events-none opacity-[0.04]" aria-hidden="true">
+    <svg viewBox="0 0 400 400" fill="none"><g stroke="#e07c00" stroke-width="4" fill="none" stroke-linecap="round"><path d="M20 340 A 160 160 0 0 1 340 180"/><path d="M60 320 A 120 120 0 0 1 300 200"/><path d="M100 300 A 80 80 0 0 1 260 220"/><circle cx="140" cy="290" r="10" fill="#e07c00"/></g></svg>
+  </div>
+
+  <div class="wrap relative">
+
+    <div class="grid lg:grid-cols-12 gap-8 mb-10 md:mb-14 items-end reveal">
+      <div class="lg:col-span-7">
+        <div class="eyebrow eyebrow-orange mb-3">In the field</div>
+        <h2 class="h-lg">
+          Where the work<br class="hidden md:block"/>
+          actually happens.
+        </h2>
+      </div>
+      <div class="lg:col-span-5">
+        <p class="text-muted text-[16px] leading-relaxed max-w-[46ch]">
+          SonzaSpark runs in Tanzanian classrooms every week — young learners, real circuits, real robots. Not slides, not simulations.
+        </p>
+      </div>
+    </div>
+
+    <!-- Photo collage: 1 big + 2 stacked -->
+    <div class="grid md:grid-cols-12 gap-4 md:gap-5 reveal">
+
+      <!-- Big image left -->
+      <figure class="md:col-span-7 relative group overflow-hidden rounded-2xl bg-cream border border-line">
+        <img
+          src="photos/sonzaspark-class.jpg"
+          alt="SonzaSpark facilitator teaching young students with an Arduino circuit lighting a bulb"
+          class="w-full h-full object-cover aspect-[4/3] md:aspect-auto"
+          style="min-height: 420px; max-height: 560px;"
+          loading="lazy"
+        />
+        <!-- Subtle gradient overlay for depth -->
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-900/40 via-transparent to-transparent pointer-events-none"></div>
+        <!-- Caption badge -->
+        <figcaption class="absolute left-5 bottom-5 right-5 flex items-end justify-between gap-4">
+          <div class="bg-white/95 backdrop-blur-sm rounded-xl px-4 py-3 shadow-xl shadow-brand-900/30 max-w-[76%]">
+            <div class="text-[10px] uppercase tracking-[0.14em] text-orange-dk font-bold mb-1">SonzaSpark · Circuits class</div>
+            <div class="text-ink text-[13.5px] font-semibold leading-snug">Students build a working lamp from an Arduino, a transistor and a few wires.</div>
+          </div>
+          <span class="hidden sm:inline-flex pill pill-orange bg-white/95 backdrop-blur-sm" style="padding: 6px 10px;">Live program</span>
+        </figcaption>
+      </figure>
+
+      <!-- Two stacked right -->
+      <div class="md:col-span-5 grid grid-cols-1 gap-4 md:gap-5">
+
+        <figure class="relative group overflow-hidden rounded-2xl bg-cream border border-line">
+          <img
+            src="photos/sonzaspark-tinkercad.jpg"
+            alt="A young SonzaSpark student designing a circuit in Tinkercad on a laptop"
+            class="w-full object-cover aspect-[4/3]"
+            style="min-height: 200px; max-height: 268px;"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-900/40 via-transparent to-transparent pointer-events-none"></div>
+          <figcaption class="absolute left-4 bottom-4">
+            <div class="bg-white/95 backdrop-blur-sm rounded-xl px-3.5 py-2 shadow-xl shadow-brand-900/30">
+              <div class="text-[10px] uppercase tracking-[0.14em] text-brand font-bold mb-0.5">Tinkercad</div>
+              <div class="text-ink text-[12.5px] font-semibold leading-snug">Designing a circuit before building it in hardware.</div>
+            </div>
+          </figcaption>
+        </figure>
+
+        <figure class="relative group overflow-hidden rounded-2xl bg-cream border border-line">
+          <img
+            src="photos/sonzaspark-exhibition.jpg"
+            alt="SonzaSpark team and students building a model at a Tanzanian exhibition"
+            class="w-full object-cover aspect-[4/3]"
+            style="min-height: 200px; max-height: 268px;"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 bg-gradient-to-t from-brand-900/40 via-transparent to-transparent pointer-events-none"></div>
+          <figcaption class="absolute left-4 bottom-4">
+            <div class="bg-white/95 backdrop-blur-sm rounded-xl px-3.5 py-2 shadow-xl shadow-brand-900/30">
+              <div class="text-[10px] uppercase tracking-[0.14em] text-brand font-bold mb-0.5">On the road</div>
+              <div class="text-ink text-[12.5px] font-semibold leading-snug">SonzaSpark exhibitions &amp; school outreach.</div>
+            </div>
+          </figcaption>
+        </figure>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ───────────────────────── Training & workshops ───────────────────────── -->
+<section id="training" class="py-20 md:py-28 bg-cream border-y border-line">
+  <div class="wrap">
+
+    <div class="grid lg:grid-cols-12 gap-8 mb-14 items-end reveal">
+      <div class="lg:col-span-7">
+        <div class="eyebrow eyebrow-orange mb-3">Training &amp; workshops</div>
+        <h2 class="h-lg">
+          Training that lands —<br class="hidden md:block"/>
+          in your school, in your workplace.
+        </h2>
+      </div>
+      <div class="lg:col-span-5">
+        <p class="text-muted text-[16px] leading-relaxed max-w-[46ch]">
+          We take digital skills, STEM and professional training wherever Tanzanian learners and teams need them — in classrooms, boardrooms, online, or on-site at your office.
+        </p>
+      </div>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-5 md:gap-6">
+
+      <!-- For schools -->
+      <article class="training-tile reveal">
+        <div class="flex items-start justify-between mb-6">
+          <div class="card-ico orange">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M3 9l9-5 9 5v3l-9 5-9-5V9zM12 14v7M7 11v5l5 2 5-2v-5" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+          </div>
+          <span class="pill pill-orange">For schools</span>
+        </div>
+        <h3 class="h-md text-ink mb-3">School &amp; teacher training</h3>
+        <p class="text-muted text-[14.5px] leading-relaxed mb-6">
+          We bring practical learning into Tanzanian schools — for students, for teachers, and for the systems that keep them running.
+        </p>
+        <ul class="space-y-3 text-[14px] text-ink/85">
+          <li class="flex gap-3"><span class="check orange"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2 2 4-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>In-school STEM clubs &amp; holiday bootcamps</li>
+          <li class="flex gap-3"><span class="check orange"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2 2 4-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Teacher training on digital tools &amp; platforms</li>
+          <li class="flex gap-3"><span class="check orange"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2 2 4-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Robotics, electronics &amp; computer-skills workshops</li>
+          <li class="flex gap-3"><span class="check orange"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2 2 4-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Vocational &amp; digital-skills programs for secondary learners</li>
+        </ul>
+      </article>
+
+      <!-- For companies -->
+      <article class="training-tile reveal">
+        <div class="flex items-start justify-between mb-6">
+          <div class="card-ico">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M3 20h18M5 20V8l7-4 7 4v12M9 12h2M13 12h2M9 16h2M13 16h2" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"/></svg>
+          </div>
+          <span class="pill">For companies &amp; NGOs</span>
+        </div>
+        <h3 class="h-md text-ink mb-3">Corporate &amp; professional training</h3>
+        <p class="text-muted text-[14.5px] leading-relaxed mb-6">
+          Upskill your team on the digital tools that run modern work — delivered on-site, at our studio, or hybrid.
+        </p>
+        <ul class="space-y-3 text-[14px] text-ink/85">
+          <li class="flex gap-3"><span class="check"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2 2 4-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Digital literacy &amp; Microsoft 365 / Google Workspace</li>
+          <li class="flex gap-3"><span class="check"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2 2 4-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Data, spreadsheets &amp; productivity for teams</li>
+          <li class="flex gap-3"><span class="check"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2 2 4-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Software &amp; systems onboarding for staff</li>
+          <li class="flex gap-3"><span class="check"><svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M2 5l2 2 4-5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Custom corporate workshops &amp; executive upskilling</li>
+        </ul>
+      </article>
+
+    </div>
+
+    <!-- Delivery options row -->
+    <div class="mt-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-[13.5px] text-muted">
+      <span class="font-semibold text-brand">Delivered</span>
+      <span>·</span>
+      <span>On-site at your school or office</span>
+      <span>·</span>
+      <span>Online</span>
+      <span>·</span>
+      <span>Hybrid</span>
+      <span>·</span>
+      <span>Weekend bootcamps</span>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── About ───────────────────────── -->
+<section id="about" class="py-20 md:py-28 bg-white">
+  <div class="wrap">
+
+    <div class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+
+      <!-- Left -->
+      <div class="lg:col-span-6 reveal">
+        <div class="eyebrow mb-3">About Afriqo Tanzania</div>
+        <h2 class="h-lg mb-6">
+          Education, built for Tanzania.<br/>
+          Powered by <span class="text-orange">technology</span>.
+        </h2>
+        <div class="space-y-4 text-[16px] text-muted leading-relaxed">
+          <p>
+            Afriqo E-Learning Tanzania is an Arusha-based education technology company. We build and operate the platforms, programs and services that Tanzanian learners, educators and institutions actually use day-to-day.
+          </p>
+          <p>
+            From Standard 1 to the workplace, from a child's first robot to a company's digital transformation — we make education and technology meet, in a way that works here.
+          </p>
+        </div>
+
+        <div class="mt-10 grid sm:grid-cols-2 gap-5">
+          <div class="p-5 rounded-xl bg-cream border border-line">
+            <div class="eyebrow mb-2">Our mission</div>
+            <p class="text-ink text-[14px] leading-relaxed">
+              To empower individuals and organizations with innovative e-learning solutions that enhance knowledge, skills and opportunities for personal, academic and professional growth.
+            </p>
+          </div>
+          <div class="p-5 rounded-xl bg-cream border border-line">
+            <div class="eyebrow eyebrow-orange mb-2">Our vision</div>
+            <p class="text-ink text-[14px] leading-relaxed">
+              To become Tanzania's leading hub for digital education and professional development — shaping a smarter, skilled, future-ready generation through technology-driven learning.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: values + studio -->
+      <div class="lg:col-span-6 reveal">
+        <div class="rounded-2xl border border-line bg-cream p-8 md:p-10">
+          <div class="eyebrow mb-5">Core values</div>
+
+          <div class="grid grid-cols-2 gap-x-6 gap-y-5">
+            <div>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-orange"></span>
+                <span class="font-semibold text-ink text-[14px]">Innovation</span>
+              </div>
+              <p class="text-muted text-[13px] leading-snug">Creative, modern, impactful learning.</p>
+            </div>
+            <div>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-brand"></span>
+                <span class="font-semibold text-ink text-[14px]">Excellence</span>
+              </div>
+              <p class="text-muted text-[13px] leading-snug">Quality education, always improving.</p>
+            </div>
+            <div>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-brand-light"></span>
+                <span class="font-semibold text-ink text-[14px]">Inclusivity</span>
+              </div>
+              <p class="text-muted text-[13px] leading-snug">Education for all backgrounds.</p>
+            </div>
+            <div>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-orange"></span>
+                <span class="font-semibold text-ink text-[14px]">Empowerment</span>
+              </div>
+              <p class="text-muted text-[13px] leading-snug">Skills and confidence to achieve.</p>
+            </div>
+            <div>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-brand"></span>
+                <span class="font-semibold text-ink text-[14px]">Integrity</span>
+              </div>
+              <p class="text-muted text-[13px] leading-snug">Honest, transparent, professional.</p>
+            </div>
+            <div>
+              <div class="flex items-center gap-2 mb-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-brand-light"></span>
+                <span class="font-semibold text-ink text-[14px]">Collaboration</span>
+              </div>
+              <p class="text-muted text-[13px] leading-snug">Educators, institutions &amp; industries, together.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- How we work (replaces old studio card) -->
+        <div class="mt-5 rounded-2xl bg-brand text-white p-8 md:p-10 relative overflow-hidden">
+          <div class="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-orange/30 blur-3xl"></div>
+          <div class="relative">
+            <div class="text-[11px] uppercase tracking-[0.18em] text-white/60 mb-4">How we work</div>
+            <h3 class="h-md text-white mb-3">Online-first. Country-wide. Grounded in Arusha.</h3>
+            <p class="text-white/75 text-[14.5px] leading-relaxed mb-6">
+              We reach learners and institutions across Tanzania primarily through our digital platforms — SonzaSchool for every student, with training and technology services delivered on-site, online or hybrid wherever they're needed.
+            </p>
+            <div class="grid grid-cols-3 gap-4 pt-5 border-t border-white/15">
+              <div><div class="text-[22px] font-semibold">24/7</div><div class="text-[11px] uppercase tracking-wider text-white/60 mt-1">Platform</div></div>
+              <div><div class="text-[22px] font-semibold">EN · SW</div><div class="text-[11px] uppercase tracking-wider text-white/60 mt-1">Languages</div></div>
+              <div><div class="text-[22px] font-semibold">Tanzania</div><div class="text-[11px] uppercase tracking-wider text-white/60 mt-1">Country-wide</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── Impact ───────────────────────── -->
+<section id="impact" class="py-20 md:py-24 bg-cream border-y border-line">
+  <div class="wrap">
+    <div class="flex flex-wrap items-end justify-between gap-6 mb-10 reveal">
+      <div>
+        <div class="eyebrow mb-3">Impact so far</div>
+        <h2 class="h-lg">What we have delivered.</h2>
+      </div>
+      <p class="text-muted max-w-[42ch] text-[14.5px]">
+        From our June 2025 Arusha pilot and school outreach across northern Tanzania.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-6 reveal">
+      <div>
+        <div class="stat-num">1,000<span class="accent">+</span></div>
+        <div class="stat-lbl">Students reached</div>
+      </div>
+      <div>
+        <div class="stat-num">10<span class="accent">+</span></div>
+        <div class="stat-lbl">Schools visited</div>
+      </div>
+      <div>
+        <div class="stat-num">60<span class="accent">%</span></div>
+        <div class="stat-lbl">Girls' participation</div>
+      </div>
+      <div>
+        <div class="stat-num">10</div>
+        <div class="stat-lbl">Facilitators trained</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── Technology partner band ───────────────────────── -->
+<section class="partner-band py-10">
+  <div class="wrap">
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 text-center sm:text-left reveal">
+      <div class="w-12 h-12 rounded-xl bg-white border border-line flex items-center justify-center text-brand font-bold text-lg flex-shrink-0">
+        H
+      </div>
+      <div>
+        <div class="eyebrow mb-1">Our technology partner</div>
+        <p class="text-ink text-[15px] leading-snug max-w-[64ch]">
+          The <span class="font-semibold text-brand">Sonza</span> family of programs is developed in partnership with <span class="font-semibold text-brand">HyracTech</span>. Afriqo E-Learning Tanzania builds, operates and delivers them here.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── CTA ───────────────────────── -->
+<section id="contact" class="py-20 md:py-28 dark-cta">
+  <div class="wrap relative">
+    <div class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+
+      <div class="lg:col-span-7 reveal">
+        <div class="chip mb-6">
+          <span class="chip-dot"></span>
+          <span>Say hello</span>
+        </div>
+        <h2 class="h-xl text-white mb-6">
+          Let's build the next step together.
+        </h2>
+        <p class="text-white/75 text-[17px] md:text-[19px] leading-relaxed max-w-[56ch] mb-8">
+          A school, a parent, an NGO, a business looking to upskill a team — reach out, and we will respond from Arusha.
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a href="mailto:info@afriqoelearningtz.com" class="btn btn-primary">
+            Email us
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <a href="tel:+255694593146" class="btn btn-outline-light">
+            Call +255 694 593 146
+          </a>
+        </div>
+      </div>
+
+      <!-- Contact card -->
+      <div class="lg:col-span-5 reveal">
+        <div class="bg-white/5 backdrop-blur-sm border border-white/15 rounded-2xl p-8">
+          <div class="eyebrow mb-5" style="color: rgba(255,255,255,0.6);">Contact details</div>
+
+          <div class="space-y-5 text-[14.5px]">
+            <div>
+              <div class="text-white/50 text-[11px] uppercase tracking-wider mb-1">Office</div>
+              <div class="text-white leading-snug">
+                Mollel Building, Mianzini<br/>
+                7<sup class="text-[0.6em]">th</sup> Floor · Arusha<br/>
+                United Republic of Tanzania
+              </div>
+            </div>
+            <div class="h-px bg-white/15"></div>
+            <div class="grid grid-cols-1 gap-4">
+              <div>
+                <div class="text-white/50 text-[11px] uppercase tracking-wider mb-1">Email</div>
+                <a class="text-white hover:text-orange-lt transition-colors" href="mailto:info@afriqoelearningtz.com">info@afriqoelearningtz.com</a>
+              </div>
+              <div>
+                <div class="text-white/50 text-[11px] uppercase tracking-wider mb-1">Phone</div>
+                <a class="text-white hover:text-orange-lt transition-colors" href="tel:+255694593146">+255 694 593 146</a>
+              </div>
+              <div>
+                <div class="text-white/50 text-[11px] uppercase tracking-wider mb-1">Web</div>
+                <a class="text-white hover:text-orange-lt transition-colors" href="https://www.afriqoelearningtz.com">www.afriqoelearningtz.com</a>
+              </div>
+            </div>
+            <div class="h-px bg-white/15"></div>
+            <div>
+              <div class="text-white/50 text-[11px] uppercase tracking-wider mb-3">Follow @afriqotz</div>
+              <div class="flex items-center gap-3">
+                <a href="#" class="w-10 h-10 rounded-lg bg-white/10 border border-white/15 flex items-center justify-center text-white hover:bg-orange hover:border-orange transition-colors" aria-label="Facebook">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M13 10h3V7h-3V5a1 1 0 011-1h2V1h-3a4 4 0 00-4 4v2H7v3h2v10h4V10z"/></svg>
+                </a>
+                <a href="#" class="w-10 h-10 rounded-lg bg-white/10 border border-white/15 flex items-center justify-center text-white hover:bg-orange hover:border-orange transition-colors" aria-label="Instagram">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="18" cy="6" r="1" fill="currentColor"/></svg>
+                </a>
+                <a href="#" class="w-10 h-10 rounded-lg bg-white/10 border border-white/15 flex items-center justify-center text-white hover:bg-orange hover:border-orange transition-colors" aria-label="TikTok">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 8.5a6.5 6.5 0 01-4-1.4V15a5 5 0 11-5-5v3a2 2 0 102 2V2h3a4 4 0 004 4v2.5z"/></svg>
+                </a>
+                <a href="#" class="w-10 h-10 rounded-lg bg-white/10 border border-white/15 flex items-center justify-center text-white hover:bg-orange hover:border-orange transition-colors" aria-label="YouTube">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22 7.5a3 3 0 00-2-2C18 5 12 5 12 5s-6 0-8 .5a3 3 0 00-2 2A32 32 0 002 12a32 32 0 00.5 4.5 3 3 0 002 2C6.5 19 12 19 12 19s6 0 8-.5a3 3 0 002-2A32 32 0 0022 12a32 32 0 00-.5-4.5zM10 15V9l5 3-5 3z"/></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── Footer ───────────────────────── -->
+<footer class="bg-brand-900 text-white pt-14 pb-10">
+  <div class="wrap">
+    <div class="grid md:grid-cols-12 gap-10 pb-10 border-b border-white/10">
+
+      <!-- Brand column -->
+      <div class="md:col-span-5">
+        <!-- Afriqo blue variant lockup (reads cleanly on dark bg) -->
+        <div class="mb-5">
+          <img src="brand_assets/afriqo-logo-blue.png" alt="Afriqo E-Learning Tanzania" style="height: 54px; width: auto;" />
+        </div>
+        <p class="text-white/60 text-[14px] leading-relaxed max-w-[42ch]">
+          Transforming education through technology. Based in Arusha, serving Tanzania.
+        </p>
+      </div>
+
+      <!-- Programs -->
+      <div class="md:col-span-3">
+        <div class="text-[11px] uppercase tracking-[0.18em] text-white/40 mb-4">Programs</div>
+        <ul class="space-y-2.5 text-[14px]">
+          <li><a href="#programs" class="text-white/80 hover:text-orange-lt transition-colors">SonzaSchool</a></li>
+          <li><a href="#programs" class="text-white/80 hover:text-orange-lt transition-colors">SonzaSpark</a></li>
+          <li><a href="#programs" class="text-white/80 hover:text-orange-lt transition-colors">SonzaTech</a></li>
+          <li><a href="#training" class="text-white/80 hover:text-orange-lt transition-colors">Training &amp; workshops</a></li>
+        </ul>
+      </div>
+
+      <!-- Company -->
+      <div class="md:col-span-2">
+        <div class="text-[11px] uppercase tracking-[0.18em] text-white/40 mb-4">Company</div>
+        <ul class="space-y-2.5 text-[14px]">
+          <li><a href="#about" class="text-white/80 hover:text-orange-lt transition-colors">About</a></li>
+          <li><a href="#impact" class="text-white/80 hover:text-orange-lt transition-colors">Impact</a></li>
+          <li><a href="#contact" class="text-white/80 hover:text-orange-lt transition-colors">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact column -->
+      <div class="md:col-span-2">
+        <div class="text-[11px] uppercase tracking-[0.18em] text-white/40 mb-4">Reach us</div>
+        <ul class="space-y-2.5 text-[13.5px]">
+          <li><a href="mailto:info@afriqoelearningtz.com" class="text-white/80 hover:text-orange-lt transition-colors break-all">info@afriqoelearningtz.com</a></li>
+          <li><a href="tel:+255694593146" class="text-white/80 hover:text-orange-lt transition-colors">+255 694 593 146</a></li>
+          <li class="text-white/60 text-[13px]">Arusha, Tanzania</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="pt-8 flex flex-wrap items-center justify-between gap-4 text-[12.5px] text-white/50">
+      <div>
+        © 2026 Afriqo E-Learning Tanzania Ltd. · Registered in the United Republic of Tanzania.
+      </div>
+      <div>
+        Sonza programs developed in partnership with HyracTech.
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    for (const e of entries) {
+      if (e.isIntersecting) {
+        e.target.classList.add('in');
+        io.unobserve(e.target);
+      }
+    }
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Fallback: force visibility
+  setTimeout(() => {
+    document.querySelectorAll('.reveal:not(.in)').forEach(el => el.classList.add('in'));
+  }, 1500);
+
+  // Header shadow on scroll
+  const header = document.getElementById('siteHeader');
+  const onScroll = () => {
+    if (window.scrollY > 10) header.classList.add('scrolled');
+    else header.classList.remove('scrolled');
+  };
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // Mobile menu
+  const menuBtn = document.getElementById('menuBtn');
+  const closeMenu = document.getElementById('closeMenu');
+  const panel = document.getElementById('mobilePanel');
+  const backdrop = document.getElementById('mobileBackdrop');
+  const openPanel = () => {
+    panel.classList.add('open');
+    backdrop.classList.add('show');
+    panel.setAttribute('aria-hidden', 'false');
+    menuBtn.setAttribute('aria-expanded', 'true');
+  };
+  const closePanel = () => {
+    panel.classList.remove('open');
+    backdrop.classList.remove('show');
+    panel.setAttribute('aria-hidden', 'true');
+    menuBtn.setAttribute('aria-expanded', 'false');
+  };
+  menuBtn.addEventListener('click', openPanel);
+  closeMenu.addEventListener('click', closePanel);
+  backdrop.addEventListener('click', closePanel);
+  panel.querySelectorAll('a').forEach(a => a.addEventListener('click', closePanel));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closePanel(); });
+</script>
+</body>
+</html>
